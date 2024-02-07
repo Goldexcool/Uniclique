@@ -8,11 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        "color1": "var(--color1)",
+        "color2": "var(--color2)",
+        "color3": "var(--color3)",
+        "white": "var(--white)",
+        "black1": "var(--black1)",
+        "black2": "var(--black2)",
+        "white-bg": "var(--white-bg)",
+        "aside": "var(--aside)",
+        "problack": "var(--problack)"
       },
+      fontFamily: {
+        'mon': ['Montserrat', 'sans-serif'],
+        'fold': ['Sophia', 'sans-serif'],
+      }
     },
   },
   plugins: [],

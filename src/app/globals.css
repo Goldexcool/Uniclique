@@ -1,33 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@200;300;400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root,
+#root, 
+#docs-root{
+  --color1: #590209;
+  --color3: #FFF4EA;
+  --white: #ffffff;
+  --white-bg: #F2F2F2;
+  --aside: #F8F8F8;
+  --black1: #000000;
+  --problack: #0D0D0D;
+  --black2: #1a1a1a;
+  --black3: #3E3E3E;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* font-family: 'Montserrat', sans-serif; */
+  background-color: var(--white-bg);
+}
+.bord{
+  border: 1px solid var(--color1);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
