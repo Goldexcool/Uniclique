@@ -18,6 +18,36 @@ const product = [
     title: "Nike shoe",
     price: "10,000",
   },
+  {
+    image01: nike1,
+    title: "Nike shoe",
+    price: "10,000",
+  },
+  {
+    image01: nike2,
+    title: "Nike shoe",
+    price: "10,000",
+  },
+  {
+    image01: nike3,
+    title: "Nike shoe",
+    price: "10,000",
+  },
+  {
+    image01: nike1,
+    title: "Nike shoe",
+    price: "10,000",
+  },
+  {
+    image01: nike2,
+    title: "Nike shoe",
+    price: "10,000",
+  },
+  {
+    image01: nike3,
+    title: "Nike shoe",
+    price: "10,000",
+  },
 ];
 
 export default product

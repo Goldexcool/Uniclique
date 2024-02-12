@@ -16,6 +16,12 @@
   --problack: #0D0D0D;
   --black2: #1a1a1a;
   --black3: #3E3E3E;
+  --confirmed: #31BC00;
+  --confi-bg: #E0FCD7;
+  --cancelled: #FF0000;
+  --cancelled-bg: #FCE2E2;
+  --pending: #FFA800;
+  --pending-bg: #FCF3E3;
 }
 
 body {

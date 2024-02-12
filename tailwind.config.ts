@@ -17,12 +17,20 @@ const config: Config = {
         "black2": "var(--black2)",
         "white-bg": "var(--white-bg)",
         "aside": "var(--aside)",
-        "problack": "var(--problack)"
+        "problack": "var(--problack)",
+        "confirmed": "var(--confirmed)",
+        "confi-bg": "var(--confi-bg)",
+        "cancelled": "var(--cancelled)",
+        "cancelled-bg": "var(--cancelled-bg)",
+        "pending": "var(--pending)",
+        "pending-bg": "var(--pending-bg)",
+
       },
       fontFamily: {
         'mon': ['Montserrat', 'sans-serif'],
         'fold': ['Sophia', 'sans-serif'],
-      }
+      },
+      
     },
   },
   plugins: [],

@@ -7,15 +7,25 @@ import plus from "../../public/assets/Vector (19).svg";
 import product from '../Data/product'
 import prev from "../../public/assets/Vector (20).svg";
 import next from "../../public/assets/Vector (21).svg";
+import logo from '../../public/assets/Group 4 (1).svg'
+import menu from '../../public/assets/bx-menu-alt-right.svg'
+import MobileHeader from "./MobileHeader";
+import Aside from "./Aside";
 
 const Products = () => {
     const [activeNumber, setActiveNumber] = useState(1);
+    const [showAside, setShowAside] = useState(false);
 
     const handleClick = (number: number) => {
         setActiveNumber(number);
     };
+    const handleMenuClick = () => {
+        setShowAside(!showAside);
+    };
+
     return (
         <section className="p-10 w-full flex flex-col gap-7 relative">
+            {/* <MobileHeader /> */}
             <Header />
             <div>
                 <h1 className="text-[20px] font-[100] text-color1 font-fold">
@@ -36,11 +46,11 @@ const Products = () => {
                     </button>
                 </div>
             </div>
-            <div className="flex justify-between w-full flex-wrap">
+            <div className="flex justify-between w-full flex-wrap gap-4">
                 {product.map((prod: any) => (
                     <div key={prod}>
                         <Image src={prod.image01} alt="product" width={280} />
-                        <div className="p-5 bg-white">
+                        <div className="p-5 bg-white rounded-md">
                             <h1 className="text-[14px] text-black1 font-[700] font-fold">{prod.title}</h1>
                             <h2 className="text-[16px] text-problack font-[700]">#{prod.price}</h2>
                             <div className="flex items-center gap-5 mt-4">
