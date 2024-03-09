@@ -25,7 +25,6 @@ const Products = () => {
 
     return (
         <section className="p-10 w-full flex flex-col gap-7 relative">
-            {/* <MobileHeader /> */}
             <Header />
             <div>
                 <h1 className="text-[20px] font-[100] text-color1 font-fold">
@@ -33,26 +32,26 @@ const Products = () => {
                 </h1>
             </div>
             <div className="w-full flex items-center justify-between">
-                <div className="px-5 py-2 bg-white border-color1 w-fit font-mon text-[14px] font-[600] text-color1 flex">
+                <div className="px-5 py-2 bg-white border-color1 w-fit font-mon md:text-[14px] text-[12px] font-[600] text-color1 flex">
                     <button className="flex gap-2 items-center justify-center">
                         Product category{" "}
                         <Image src={drop} alt="drop" width={12} height={12} />
                     </button>
                 </div>
 
-                <div className="px-5 py-2 bg-color1 border-color1 w-fit font-mon text-[14px] font-[600] text-white flex">
+                <div className="px-5 py-2 bg-color1 border-color1 w-fit font-mon font-[600] text-white flex md:text-[14px] text-[12px]">
                     <button className="flex gap-2 items-center justify-center">
                         <Image src={plus} alt="drop" width={12} height={12} /> Add product
                     </button>
                 </div>
             </div>
-            <div className="flex justify-between w-full flex-wrap gap-4">
+            <div className="flex justify-around w-full flex-wrap gap-4 items-center mb-10">
                 {product.map((prod: any) => (
-                    <div key={prod}>
-                        <Image src={prod.image01} alt="product" width={280} />
+                    <div key={prod} className="flex-grow">
+                        <Image src={prod.image01} alt="product" width={280} className="md:w-[280px] w-full md:h-auto h-full" />
                         <div className="p-5 bg-white rounded-md">
-                            <h1 className="text-[14px] text-black1 font-[700] font-fold">{prod.title}</h1>
-                            <h2 className="text-[16px] text-problack font-[700]">#{prod.price}</h2>
+                            <h1 className="md:text-[14px] text-[12px]text-black1 font-[700] font-fold">{prod.title}</h1>
+                            <h2 className="md:text-[16px] text-[13px] text-problack font-[700]">#{prod.price}</h2>
                             <div className="flex items-center gap-5 mt-4">
                                 <div className=" bg-white border-color1 w-fit font-mon text-[14px] font-[600] text-color1 flex">
                                     <button className="px-4 py-2 rounded-md bord">Edit</button>
@@ -66,7 +65,7 @@ const Products = () => {
                 ))
                 }
             </div>
-            <div className="bottom-3 absolute flex items-center gap-10">
+            <div className="bottom-3 absolute flex md:flex-row flex-col items-center md:gap-10 gap-4">
                 <h1 className="text-[12px] font-[500] text-color1 font-fold">Showing 1 pages of 5 entries</h1>
                 <div className="flex gap-4">
                     <div className="flex gap-3 items-center">

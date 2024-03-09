@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 const Header = () => {
     return (
-        <div className="flex justify-between items-center w-full">
-            <div className="bg-white rounded-md w-[550px] flex items-center border-white">
+        <div className="flex lg:justify-between justify-start items-start w-full flex-col lg:flex-row">
+            <div className="bg-white rounded-md lg:w-[500px] w-full flex items-center border-white mt-10 lg:mt-0">
                 <input
                     type="text"
                     placeholder="Search your order"
@@ -15,7 +15,7 @@ const Header = () => {
                 />
                 <Image src={search} alt="search" width={12} height={12} />
             </div>
-            <div className="flex gap-8 items-center justify-center">
+            <div className="flex gap-8 items-center justify-center mt-2 lg:mt-0">
                 <Image
                     src={nortification}
                     alt="nortificationbar"

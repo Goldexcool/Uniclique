@@ -8,16 +8,16 @@ import Customers from '../Data/customer';
 const Customer = () => {
   return (
     <section className="p-10 w-full flex flex-col gap-7 relative">
-      <div className="flex justify-between items-center w-full">
-        <div className="bg-white rounded-md w-[550px] flex items-center border-white">
+      <div className="flex md:justify-between md:items-center justify-start items-start w-full flex-col md:flex-row">
+        <div className="bg-white rounded-md md:w-[550px] w-full flex items-center border-white mt-10 md:mt-0">
           <input
             type="text"
             placeholder="Search your customers"
-            className="p-2 py-3 w-[95%] text-[12px] border-none"
+            className="p-2 py-3 w-[95%]  text-[12px] border-none"
           />
           <Image src={search} alt="search" width={12} height={12} />
         </div>
-        <div className="flex gap-8 items-center justify-center">
+        <div className="flex gap-8 items-center justify-center mt-2 md:mt-0">
           <Image
             src={nortification}
             alt="nortificationbar"
@@ -34,7 +34,7 @@ const Customer = () => {
         </div>
       </div>
 
-      <div>
+      <div className='overflow-x-auto'>
         <table className="w-full border-collapse border border-gray-100">
           <thead>
             <tr className="text-problack">
@@ -66,9 +66,9 @@ const Customer = () => {
                     </div>
                   </div>
                 </td>
-                <td className="px-6 py-3">{customer.location}</td>
-                <td className="px-6 py-3">{customer.date}</td>
-                <td className={`px-6 py-1 mt-[1rem] flex justify-center items-center w-[70%] text-[12px]  rounded-full ${customer.status === 'Confirmed' ? 'text-confirmed bg-confi-bg' : ''}`}>
+                <td className="px-6 py-3 md:text-[15px] text-[12px]">{customer.location}</td>
+                <td className="px-6 py-3 md:text-[15px] text-[12px]">{customer.date}</td>
+                <td className={`px-6 py-1 lg:mt-[1rem] mt-[1.3rem] flex justify-center items-center w-[70%] md:text-[12px] text-[10px]  rounded-full ${customer.status === 'Confirmed' ? 'text-confirmed bg-confi-bg' : ''}`}>
                   {customer.status}
                 </td>
               </tr>

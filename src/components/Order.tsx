@@ -50,30 +50,30 @@ const Order = () => {
     return (
         <section className='p-10 w-full flex flex-col gap-7 relative'>
             <Header />
-            <h1 className='text-color1 font-[500] text-[20px]'>My Orders</h1>
-            <div className=' bg-white rounded-sm'>
-                <div className='flex w-full justify-around items-center text-[20px] p-5'>
+            <h1 className='text-color1 font-[500] md:text-[20px] text-[16px]'>My Orders</h1>
+            <div className=' bg-white rounded-sm mb-[3rem]'>
+                <div className='flex w-full justify-around items-center  p-5 '>
                     <h1
                         onClick={() => handleClick(1, 'All')}
-                        className={`cursor-pointer ${getUnderlineStyle('All')} ${activeTab === 'All' ? 'active-tab text-color1 text-[17px] font-[600]' : 'inactive-tab text-gray-500 text-[17px]'}`}
+                        className={`cursor-pointer ${getUnderlineStyle('All')} ${activeTab === 'All' ? 'active-tab text-color1 md:text-[17px] text-[10px] font-[600]' : 'inactive-tab text-gray-500 md:text-[17px] text-[10px]'}`}
                     >
                         All orders
                     </h1>
                     <h2
                         onClick={() => handleClick(2, 'Completed')}
-                        className={`cursor-pointer ${getUnderlineStyle('Completed')} ${activeTab === 'Completed' ? 'active-tab text-color1 text-[17px]' : 'inactive-tab text-gray-500 text-[17px]'}`}
+                        className={`cursor-pointer ${getUnderlineStyle('Completed')} ${activeTab === 'Completed' ? 'active-tab text-color1 md:text-[17px] text-[10px]' : 'inactive-tab text-gray-500 md:text-[17px] text-[10px]'}`}
                     >
                         Completed
                     </h2>
                     <h3
                         onClick={() => handleClick(3, 'Pending')}
-                        className={`cursor-pointer ${getUnderlineStyle('Pending')} ${activeTab === 'Pending' ? 'active-tab text-color1 text-[17px]' : 'inactive-tab text-gray-500 text-[17px]'}`}
+                        className={`cursor-pointer ${getUnderlineStyle('Pending')} ${activeTab === 'Pending' ? 'active-tab text-color1 md:text-[17px] text-[10px]' : 'inactive-tab text-gray-500 md:text-[17px] text-[10px]'}`}
                     >
                         Pending
                     </h3>
                     <h4
                         onClick={() => handleClick(4, 'Cancel')}
-                        className={`cursor-pointer ${getUnderlineStyle('Cancel')} ${activeTab === 'Cancel' ? 'active-tab text-color1 text-[17px]' : 'inactive-tab text-gray-500 text-[17px]'}`}
+                        className={`cursor-pointer ${getUnderlineStyle('Cancel')} ${activeTab === 'Cancel' ? 'active-tab text-color1 md:text-[17px] text-[10px]' : 'inactive-tab text-gray-500 md:text-[17px] text-[10px]'}`}
                     >
                         Cancel
                     </h4>
@@ -82,7 +82,7 @@ const Order = () => {
                 <div className='overflow-x-auto'>
                     <table className='min-w-full bg-white border-collapse border border-gray-100'>
                         <thead>
-                            <tr className='bg-color1 text-white'>
+                            <tr className='bg-color1 text-white md:text-[16px] text-[13px]'>
                                 <th className='py-4 px-6 text-left'>Product Name</th>
                                 <th className='py-4 px-6 text-left'>Order ID</th>
                                 <th className='py-4 px-6 text-left'>Order Date</th>
@@ -104,7 +104,7 @@ const Order = () => {
                                     <td className='px-6 py-5'>#{order.orderId}</td>
                                     <td className='px-6 py-5'>{order.orderDate}</td>
                                     <td className='px-6 py-5'>&#8358;{order.price}</td>
-                                    <td className={`px-6 py-1 mt-[0.9rem] flex justify-center items-center w-[70%] ${getStatusStyle(order.status)}`}>{order.status}</td>
+                                    <td className={`px-6 py-1 lg:mt-[0.9rem] mt-[1.6rem] flex justify-center items-center w-[70%] ${getStatusStyle(order.status)}`}>{order.status}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -112,7 +112,7 @@ const Order = () => {
                 </div>
 
             </div>
-            <div className="bottom-3 absolute flex items-center gap-10">
+            <div className="bottom-3 absolute flex md:flex-row flex-col items-center md:gap-10 gap-4">
                 <h1 className="text-[12px] font-[500] text-color1 font-fold">Showing 1 pages of 5 entries</h1>
                 <div className="flex gap-4">
                     <div className="flex gap-3 items-center">
